@@ -1,8 +1,16 @@
+import Header from "./Header";
+import NavBar from "./NavBar";
+import MainContent from "./Maincontent";
+import Footer from "./Footer";
+
 function App() {
   return (
-    <>
-      <h1>Waarom is Idris Gay?</h1>
-    </>
+    <div>
+      <Header />
+      <NavBar />
+      <MainContent />
+      <Footer />
+    </div>
   );
 }
 
