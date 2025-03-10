@@ -1,0 +1,30 @@
+.product-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.product-item.in-stock {
+  border: 2px solid green;
+}
+
+.product-item.no-stock {
+  border: 2px solid red;
+}
+
+.product-title {
+  margin-top: 0;
+}
+
+.product-stock.in-stock {
+  color: green;
+}
+
+.product-stock.no-stock {
+  color: red;
+}
