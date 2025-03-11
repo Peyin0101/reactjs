@@ -9,10 +9,24 @@ function Badge({ role }) {
     case "Editor":
       badgecolor = "blue";
       break;
-    case "Visitor":
+    case "Bezoeker":
       badgecolor = "green";
       break;
     default:
       badgecolor = "gray";
   }
+  return (
+    <span
+      style={{
+        backgroundColor: badgecolor,
+        borderRadius: "5px",
+        color: "white",
+        padding: "5px",
+      }}
+    >
+      {role}
+    </span>
+  );
 }
+
+export default Badge;
