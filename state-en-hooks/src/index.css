@@ -66,3 +66,60 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.container {
+  border: 1px solid black;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.afwezig-zetten {
+  background-color: red;
+  color: white;
+  margin: 5px;
+}
+
+.aanwezig-zetten {
+  background-color: rgb(2, 168, 2);
+  color: white;
+  margin: 5px;
+}
+
+.verwijder {
+  background-color: rgb(77, 77, 77);
+  color: white;
+  margin: 7px;
+}
+
+.toevoeg {
+  background-color: blue;
+  color: white;
+  margin: 7px;
+}
+
+.aanwezig {
+  color: rgb(2, 168, 2);
+}
+
+.afwezig {
+  color: red;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.status-aanwezig {
+  color: rgb(2, 168, 2);
+}
+
+.status-afwezig {
+  color: red;
+}
