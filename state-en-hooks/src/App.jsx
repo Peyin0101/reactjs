@@ -2,6 +2,7 @@ import Counter from "./Counter";
 import Login from "./Login";
 import Todos from "./Todos";
 import Deelnemers from "./Deelnemers";
+import ColorPicker from "./ColorPicker";
 
 export default function App() {
   return (
@@ -9,7 +10,8 @@ export default function App() {
       {/* <Counter /> */}
       {/* <Login /> */}
       {/* <Todos /> */}
-      <Deelnemers />
+      {/* <Deelnemers /> */}
+      <ColorPicker />
     </div>
   );
 }
