@@ -12,8 +12,8 @@ export default function App() {
     <div>
       {/* <Counter /> */}
       {/* <Login /> */}
-      {/* <Todos /> */}
-      {/* <Deelnemers /> */}
+      <Todos />
+      <Deelnemers />
       <ColorPicker />
       <WindowSize />
       <Timer />
