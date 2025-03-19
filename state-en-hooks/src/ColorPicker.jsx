@@ -17,21 +17,21 @@ export default function ColorPicker() {
   };
   return (
     <div className="kleurkiezer-container">
-      <h1>Kleurkiezer</h1>
+      <h1 style={{ color: `rgb(${red}, ${green}, ${blue})` }}>Kleurkiezer</h1>
       <ColorSlider
-        color="Rood"
+        label="Rood"
         value={red}
         onChange={handleRedChange}
         colorCode="red"
       />
       <ColorSlider
-        color="Groen"
+        label="Groen"
         value={green}
         onChange={handleGreenChange}
         colorCode="green"
       />
       <ColorSlider
-        color="Blauw"
+        label="Blauw"
         value={blue}
         onChange={handleBlueChange}
         colorCode="blue"
@@ -45,7 +45,12 @@ export default function ColorPicker() {
         }}
       ></div>
       <p
-        style={{ fontSize: "1.5rem", textAlign: "center", paddingTop: "80px" }}
+        style={{
+          color: `rgb(${red}, ${green}, ${blue})`,
+          fontSize: "1.5rem",
+          textAlign: "center",
+          paddingTop: "80px",
+        }}
       >
         rgb({red}, {green}, {blue})
       </p>

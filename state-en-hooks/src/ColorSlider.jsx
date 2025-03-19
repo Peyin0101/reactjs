@@ -1,6 +1,6 @@
 import React from "react";
 
-function ColorSlider({ label, value, onChange }) {
+function ColorSlider({ label, value, onChange, colorCode }) {
   let color;
 
   if (label === "Rood") {
@@ -13,8 +13,8 @@ function ColorSlider({ label, value, onChange }) {
 
   return (
     <div>
-      <label style={{ color: "rgb(255,0,0)" }} htmlFor={colorCode}>
-        {color}
+      <label style={{ color }} htmlFor={colorCode}>
+        {label}
       </label>
       <input
         type="range"
