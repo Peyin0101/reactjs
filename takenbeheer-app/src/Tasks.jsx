@@ -2,10 +2,10 @@ import { useState } from "react";
 import TaskInput from "./TaskInput";
 import TaskFilters from "./TaskFilters";
 import TaskList from "./TaskList";
-import { useTasks } from "./useTasks";
+import useTasks from "./useTasks";
 
 export default function Tasks() {
-  const [tasks, addTask, removeTask, toggleTaskStatus] = useTasks();
+  const { tasks, addTask, removeTask, toggleTaskStatus } = useTasks();
   const [filter, setFilter] = useState("all");
 
   const filteredTasks = tasks.filter((task) => {
@@ -15,7 +15,8 @@ export default function Tasks() {
   });
 
   return (
-    <div>
+    <div className="taskscontainer">
+      <h1>Takenbeheer</h1>
       <TaskInput onAdd={addTask} />
       <TaskFilters setFilter={setFilter} filter={filter} />
       <TaskList
