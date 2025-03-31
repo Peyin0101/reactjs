@@ -5,6 +5,7 @@ function RecipesPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Fetch methode :
   // useEffect(() => {
   //   setLoading(true);
   //   fetch("https://dummyjson.com/recipes")
@@ -24,6 +25,7 @@ function RecipesPage() {
   //     });
   // }, []);
 
+  // Async/await methode :
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
@@ -32,9 +34,17 @@ function RecipesPage() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
+        const data = await response.json();
+        setRecipes(data.recipes);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
       }
-    }
-  })
+    };
+
+    fetchRecipes();
+  }, []);
 
   if (loading) {
     return (
